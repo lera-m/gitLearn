@@ -1,0 +1,72 @@
+html
+  meta(charset='utf-8')
+  title category
+  head
+    style(type='text/css').
+      body {
+      padding: 50px 70px;
+      background-color: #c2c4c6;
+      font-family: Arial;
+      }
+      .content {
+      padding: 35px;
+      background-color: white;
+      }
+      h1, p, h2 {
+        text-align: center;
+      }
+      .gallery {
+          margin: 60px 0;
+          display: flex;
+          justify-content: space-between;
+      }
+      .show {
+          text-decoration: underline;
+      }
+      .grey_font {
+          color: #303030;
+      }
+      .italic {
+          font-style: italic;
+      }
+      .img {
+          width: 205px;
+          height: 255px;
+          border: 1px solid #88909b;;
+      }
+body
+    .content
+        include header.pug
+        div.grey_font HOME  /  MEN
+        h1 COATS
+        p.grey_font.show show more &#9656;
+        .gallery
+        
+            mixin images(number)
+                - n = 0
+                while n < number
+                    div
+                        .img
+                        p Double-Layered Top
+                        p.grey_font &#8364 89,95
+                    - n++
+                    
+            +images(4)
+                    
+        h1 OUTERWEAR
+        p.grey_font.show show more &#9656;
+        
+        .gallery
+            +images(4)
+        h1 T_SHIRTS
+        p.grey_font.show show more &#9656;
+        
+        .gallery
+            +images(4)
+        hr
+        
+        h2.grey_font.italic Check our lookbook
+        
+        include slider.pug
+                
+        include footer.pug

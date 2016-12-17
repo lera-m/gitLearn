@@ -1,0 +1,75 @@
+doctype html
+html
+    style(type='text/css').
+      .footer {
+          display: flex;
+          padding-top: 30px;
+      }
+      .footer .footer_menu {
+          width: 25%;
+          border-right: 1px solid #88909b;
+          padding-left: 10px;
+      }
+      .footer div:not(.icon):last-child {
+          border-right: none;
+      }
+      .footer div:first-child {
+         padding-left: 0;
+      }
+      .footer div p {
+          text-align: left;
+      }
+      .icon {
+          float:left;
+          margin-right: 15px;
+          height: 30px;
+          width: 30px;
+          border: 1px solid grey;
+          text-align: center;
+      }
+      .twitter {
+          background-image: url("./icons/twitter.png");
+          width: 16px;
+          height: 16px;
+          margin: 20% auto;
+      }
+      .facebook {
+          background-image: url("./icons/fb.png");
+          width: 16px;
+          height: 16px;
+          margin: 20% auto;
+      }
+      .instagram {
+          background-image: url("./icons/instagram.png");
+          width: 16px;
+          height: 16px;
+          margin: 20% auto;
+      }
+
+    body
+        .footer
+            div.footer_menu
+                
+                p COLLECTION
+                each val in ['Woman (1725)', 'Men (635)', 'Kids (2514)', 'Coming Soon (76)']
+                    p.grey_font= val
+            div.footer_menu
+                p SITE
+                each val in ['Terms of Service', 'Privacy Policy', 'Copyright Policy', 'Press Kit', 'Support']
+                    p.grey_font= val
+            div.footer_menu
+                p SHOP
+                each val in ['About us', 'Shipping Metods', 'Career', 'Contact']
+                    p.grey_font= val
+            div.footer_menu
+                p SOCIAL
+                p.grey_font Shopper is made with love in Warsaw,
+                p.grey_font 2014 &#169; All rights reserved. El Passion
+                .social
+                    .icon
+                        i.twitter.icon_small
+                    .icon
+                        i.facebook.icon_small
+                    .icon
+                        i.instagram.icon_small
+        

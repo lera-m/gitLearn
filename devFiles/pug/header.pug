@@ -1,0 +1,88 @@
+doctype html
+html
+    style(type='text/css').
+         .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+          }
+          .black_square {
+             padding-bottom: 7px;
+             background-color: black;
+             color: white;
+             width: 47px;
+             height: 40px;
+             text-align: center;
+          }
+          .orange {
+            color: orange;
+          }
+          .icon_small {
+              display: inline-block;
+              background-repeat: no-repeat;
+          }
+          .icon_bag {
+              background-image: url("./icons/bag.png");
+              height: 17px;
+              width: 17px;
+          }
+          .icon_search {
+              background-image: url("./icons/search.png");
+              background-repeat: no-repeat;
+              width: 16px;
+              height: 16px;
+              margin: 6px;
+          }
+          .search {
+              height: 29px;
+              width: 29px;
+              position: relative;
+              border: 1px solid black;
+              overflow: hidden;
+          }
+          .search input {
+              width: 180px;
+              padding: 8px;
+              border:none;
+          }
+          .search input:focus {
+              outline: none;
+          }
+          .search .button-search {
+              width: 29px;
+              height: 29px;
+              border: none;
+              background-color:grey;
+              position: absolute;
+              bottom: 0;
+              right: 0;
+          }
+          #loged-in {
+             display: none;
+          }
+    body
+        .header.grey_font
+            .black_square
+                p SH
+            each val in ['Woman', 'Men', 'Kids', 'Coming Soon', 'About']
+              div= val
+            
+            .login#login
+                #loged-in
+                  | ☃ Hi, Michael(
+                  span.orange logout
+                  | )
+                #loged-out
+                  |☃ Log In
+            .basket
+              i.icon_small.icon_bag
+              | Basket (
+              span#basketValue 0
+              |)
+            form.search#search
+              span.button-search
+                i.icon_small.icon_search
+              input(type='search', placeholder='Search something...')
+                
+        hr
+    script(src='script.js')

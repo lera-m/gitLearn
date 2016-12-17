@@ -1,0 +1,231 @@
+html
+  meta(charset='utf-8')
+  title main
+  head
+    style(type='text/css').
+      body {
+      padding: 50px 70px;
+      background-color: #c2c4c6;
+      font-family: Arial;
+      }
+      .content {
+      padding: 35px;
+      background-color: white;
+      overflow: auto;
+      }
+      .title {
+          text-align: center;
+          padding-top: 100px;
+          
+      }
+      .title p {
+          margin-bottom: 40px;
+          color: #606060;
+          font-family: Georgia;
+          font-size: 24px;
+      }
+      .title h1 {
+          font-size: 72px;
+      }
+      .italic {
+          font-style: italic;
+      }
+      .check {
+          border: 1px solid #959595;
+          font-size: 14px;
+          padding: 10px;
+          margin: 0 auto;
+          width: 230px;
+      }
+      .gallery {
+          padding: 50px 0;
+          float: left;
+          text-align: center;
+          color: white;
+      }
+      .item{
+          float: left;
+      }
+      .item div {
+           padding: 20% 15%;
+      }
+      .item1 div,
+      .item7 div {
+          padding: 80% 20%;
+          font-size: 24px;
+      }
+      .item1 {
+          height: 590px;
+          width: 295px;
+          background-color: #d2d2d2;
+      }
+      .item2 {
+          height: 295px;
+          width: 295px;
+          background-color: #bbb;
+          font-family: Georgia;
+          font-size: 14px;
+      }
+      .item3 {
+          height: 295px;
+          width: 295px;
+          background-color: #dbdbdb;
+      }
+      .item4 {
+          height: 295px;
+          width: 295px;
+          background-color: #606060;
+      }
+      
+      .item5 {
+          height: 295px;
+          width: 295px;
+          background-color: #cacaca;
+      }
+      .item6 {
+          height: 295px;
+          width: 295px;
+          background-color: #bbb;
+          font-family: Georgia;
+          font-size: 14px;
+      }
+      .item7 {
+          height: 590px;
+          width: 295px;
+          background-color: #d7d7d7;
+      }
+      .item8 {
+          height: 295px;
+          width: 295px;
+          background-color: #c2c2c2;
+      }
+       .item9 {
+          height: 295px;
+          width: 295px;
+          background-color: #606060;
+      }
+      .item10 {
+          height: 295px;
+          width: 295px;
+          background-color: #d0d0d0;
+          
+      }
+      .gallery .last_line {
+          margin-top: -295px;
+          float: left;
+      }
+      .icon_small {
+          display: inline-block;
+          background-repeat: no-repeat;
+      }
+      .twitter_white {
+          background-image: url("./icons/twitter-white.png");
+          width: 30px;
+          height: 25px;
+          margin: auto 8px;
+      }
+      .sign_up {
+          text-align: center;
+          padding-top: 100px;
+      }
+      .sign_up h2 {
+          color: #303030;
+          font-size: 36px;
+      }
+      .sign_up p {
+          color: #606060;
+          font-family: Georgia;
+          font-size: 18px;
+      }
+      .email {
+          width: 570px;
+          position: relative;
+          border: 1px solid #959595;
+          margin: 50px auto;
+      }
+      .email input {
+          width: 570px;
+          height: 56px;
+          border: none;
+          color: #606060;
+          text-align: left;
+          padding: 15px;
+          font-size: 14px;
+          font-style: italic;
+      }
+      .email .button {
+          width: 95px;
+          height: 56px;
+          background-color: #f68236;
+          border: none;
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          color: white;
+          font-family: Lato;
+          font-size: 14px;
+      }
+
+    body
+     .content  
+        include header.pug
+        .title
+            h1 HAZY SHADE OF SPRING
+            p.italic Quisque lorem tortor fringilla sed, vestibulum id, eleifend justo.
+            .check CHECK NEW ARRIVALS
+        .gallery
+            .item.item1
+                div
+                    p HEATHER GREY BASICS
+                    p.italic NEW ARRIVAL
+            .item.item2
+                div
+                    |&#9620;
+                    i.twitter_white.icon_small
+                    |&#9620;
+                    p.italic Opening Ceremony @IndonesiaFW tomorrow, PMers! Are you ready for the biggest fashion movement in
+                    p @PuspitaMarthaID 
+            .item.item3
+            .item.item4
+                div
+                    h2 &#8592;
+                    h2 ELEGANT SHOES
+                    p.italic BRAIDED LEATHER
+            .item.item5  
+                div
+                    h2 CHUCK TAYLORS
+                    p.italic $125.00
+            .item.item6
+                div
+                    |&#9620;
+                    i.twitter_white.icon_small
+                    |&#9620;
+                    p.italic Girls, Girls, Girls: A Look Back at 50 Years of the Pirelli Calendar
+                    p.italic @Vogue
+            .item.item7
+                div
+                    p JEANS FOR ADVENTURE
+                    p.italic NEW ARRIVAL
+            .last_line
+                .item.item8
+                .item.item9
+                    div
+                        h2 &#8592;
+                        h2 JAXON HAT
+                        p.italic BEANIE HAT
+
+                .item.item10
+                    div 
+                        h2 BASIC BLAZER
+                        p.italic FROM $199.00
+        
+        .sign_up
+            h2 SIGN UP TO RECEIVE OUR UPDATES
+            p.italic Nulla ipsum dolor lacus, suscipit adipiscing. Cum sociis natoque penatibus et ultrices volutpat.
+            .email
+                input(type='text' placeholder='Your e-mail')
+                button.button add
+        
+        include slider.pug
+                
+        include footer.pug
